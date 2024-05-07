@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(124, 74, 57, 0.3),rgba(4,9,30,0.7)),url(images/cook.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}   
+.container{
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.logo{
+    width: 175px;
+    cursor: pointer;
+}
+section{
+    scroll-snap-align: start;
+}
+
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 125px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e4d0cf;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #c06660;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.icons .fab{
+    color: #c06660;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fas fa-at{
+    color: #e08983;
+}
+.fab fa-facebook{
+    color: #e08983;
+}
+.fab fa-tiktok{
+    color: #e08983;
+}
+.fab fa-instagram{
+    color: #e08983;
+}
+.fab fa-x-twitter{
+    color: #e08983;
+}
+.fab fa-linkedin{
+    color: #e08983;
+}
+
+.examr{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.examr h3{
+    font-size: 25px;
+}
+
+.examr p{
+    font-size: 16px;
+}
+
+.examr-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.examr-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.examr-col p{
+    padding: 0;
+}
+
+.examr-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(96, 124, 78);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+.footer {
+    background-color: #f5ecec;
+}
+.close-btn {
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+}
+.warning-banner {
+    background-color: #ffcc00;
+    color: #333; 
+    text-align: center; 
+    padding: 10px 0;
+    font-weight: bold; 
+    opacity: 1; 
+    transition: opacity 2s ease-in-out; 
+}
+
+.warning-banner p {
+    margin: 0; 
+    padding: 0; 
+    font-size: 16px; 
+}
+
+.warning-banner.hide {
+    opacity: 0; 
+}
+.contact-form {
+    background-color: #ffffff;
+    border-radius: 20px; 
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.contact-form input[type="text"], 
+.contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #c06660;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form input[type="submit"]:hover {
+    background-color: #e08983;
+}
